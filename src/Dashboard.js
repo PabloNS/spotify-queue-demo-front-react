@@ -1,13 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import useAuth from "./useAuth";
+import RecommendMe from "./RecommendMe";
+import RecommendOthers from "./RecommendOthers";
 
 const Dashboard = ({ code }) => {
+
   useAuth(code);
 
   return (
     <div>
-    {code}        
-    </div>
+    <RecommendMe />
+    <RecommendOthers />
+  </div>
   );
 };
 
